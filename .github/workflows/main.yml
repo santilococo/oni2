@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Esy setup
+        run: |
+          docker build --network=host -t centos scripts/docker/centos
+          docker container run --rm \
+              --name centos \
+              --network=host \
+              --volume `pwd`:/oni2 \
+              --volume ~/.esy:/esy/store \
+              --cap-add SYS_ADMIN \
+              --device /dev/fuse \
+              --security-opt apparmor:unconfined \
+              centos \
+              /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
+          ls -al _release/Onivim2.AppDir
+              
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: _release/Onivim2.AppDir

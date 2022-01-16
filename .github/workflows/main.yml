@@ -27,8 +27,14 @@ jobs:
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           ls -al _release/Onivim2.AppDir
+          tar -cvf AppDir.tar _release/Onivim2.AppDir
               
       - uses: actions/upload-artifact@v2
         with:
           name: build
           path: _release/Onivim2.AppDir
+    
+      - uses: actions/upload-artifact@v2
+        with:
+          name: AppDirArtifact
+          path: AppDir.tar

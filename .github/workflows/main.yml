@@ -12,6 +12,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: Get latest tag
+        id: getTag
+        run: |
+          GIT_TAG=$(git describe --abbrev=0 --tags)
+          echo ::set-output name=gitTag::${GIT_TAG}
 
       - name: Esy setup
         run: |
@@ -26,15 +34,16 @@ jobs:
               --security-opt apparmor:unconfined \
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
-          ls -al _release/Onivim2.AppDir
           tar -cvf AppDir.tar _release/Onivim2.AppDir
               
       - uses: actions/upload-artifact@v2
         with:
           name: build
           path: _release/Onivim2.AppDir
-    
-      - uses: actions/upload-artifact@v2
+            
+      - uses: marvinpinto/action-automatic-releases@latest
         with:
-          name: AppDirArtifact
-          path: AppDir.tar
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: ${{ steps.getTag.outputs.gitTag }}
+          prerelease: false
+          files: AppDir.tar

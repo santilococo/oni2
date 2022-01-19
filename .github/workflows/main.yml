@@ -23,6 +23,7 @@ jobs:
 
       - name: Esy setup
         run: |
+          rm -rf ~/.esy
           docker build --network=host -t centos scripts/docker/centos
           docker container run --rm \
               --name centos \

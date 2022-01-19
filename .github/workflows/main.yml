@@ -35,7 +35,7 @@ jobs:
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
-          tar -cvf AppCache.tar .esy
+          tar -cvf AppCache.tar ~/.esy
               
       - uses: actions/upload-artifact@v2
         with:

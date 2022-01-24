@@ -29,7 +29,8 @@ jobs:
 
       - name: Esy setup
         run: |
-          rm -rf ~/.esy
+          rm -rf /esy/store
+          rm -rf /oni2
           docker build --network=host -t centos scripts/docker/centos
           docker container run --rm \
               --name centos \

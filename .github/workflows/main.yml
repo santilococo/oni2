@@ -36,13 +36,16 @@ jobs:
               --name centos \
               --network=host \
               --volume `pwd`:/oni2 \
+              --volume ~/.esy:/esy/store \
               --cap-add SYS_ADMIN \
               --device /dev/fuse \
               --security-opt apparmor:unconfined \
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
-          tar -cvf AppCache.tar ~/.esy
+          tar -cvf AppCache.tar /esy/store
+          rm -rf /esy/store
+          rm -rf /oni2
               
       - uses: actions/upload-artifact@v2
         with:

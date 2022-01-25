@@ -29,8 +29,7 @@ jobs:
 
       - name: Esy setup
         run: |
-          rm -rf /esy/store
-          rm -rf /oni2
+          rm -rf ~/.esy
           docker build --network=host -t centos scripts/docker/centos
           docker container run --rm \
               --name centos \
@@ -43,9 +42,10 @@ jobs:
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
-          tar -cvf AppCache.tar /esy/store
-          rm -rf /esy/store
-          rm -rf /oni2
+          ls -al ~/.esy
+          ls -al /esy/store
+          tar -cvf AppCache.tar ~/.esy
+          rm -rf ~/.esy
               
       - uses: actions/upload-artifact@v2
         with:

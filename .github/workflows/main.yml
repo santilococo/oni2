@@ -29,7 +29,6 @@ jobs:
 
       - name: Esy setup
         run: |
-          rm -rf ~/.esy
           docker build --network=host -t centos scripts/docker/centos
           docker container run --rm \
               --name centos \
@@ -44,12 +43,7 @@ jobs:
           tar -cvf AppDir.tar _release/Onivim2.AppDir
           tar -cvf AppCache.tar ~/.esy
           rm -rf ~/.esy
-              
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build
-          path: _release/Onivim2.AppDir
-            
+
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}

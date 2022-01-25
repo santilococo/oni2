@@ -41,8 +41,7 @@ jobs:
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
-          #tar -cvf AppCache.tar ~/.esy
-          #rm -rf ~/.esy
+          mv ~/.esy AppCache
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -51,5 +50,4 @@ jobs:
           prerelease: false
           files: |
             AppDir.tar
-            ~/.esy
-            #AppCache.tar
+            AppCache

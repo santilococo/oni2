@@ -42,8 +42,6 @@ jobs:
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
-          ls -al ~/.esy
-          ls -al /esy/store
           tar -cvf AppCache.tar ~/.esy
           rm -rf ~/.esy
               

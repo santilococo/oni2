@@ -41,12 +41,16 @@ jobs:
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
+          rm -rf _release/Onivim2.AppDir
           echo ".esy"
-          ls -al ~/.esy
+          ls -alh ~/.esy
           echo "$PWD"
-          ls -al
+          ls -alh
           set +e; mv ~/.esy AppCache; set -e
-          ls -al
+          tar -cvf AppCache ~/.esy
+          rm -rf ~/.esy
+          ls -alh
+          ls -alh ~/
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -56,5 +60,3 @@ jobs:
           files: |
             AppDir.tar
             AppCache
-            ~/.esy
-            _esy

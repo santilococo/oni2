@@ -43,9 +43,9 @@ jobs:
           tar -cvf AppDir.tar _release/Onivim2.AppDir
           echo ".esy"
           ls -al ~/.esy
-          echo "/esy/store"
-          set +e; ls -al /esy/store; set -e
-          mv ~/.esy AppCache
+          ls -al
+          set +e; mv ~/.esy AppCache; set -e
+          ls -al
 
       - uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -55,3 +55,4 @@ jobs:
           files: |
             AppDir.tar
             AppCache
+            ~/.esy

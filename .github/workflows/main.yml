@@ -43,6 +43,7 @@ jobs:
           tar -cvf AppDir.tar _release/Onivim2.AppDir
           echo ".esy"
           ls -al ~/.esy
+          echo "$PWD"
           ls -al
           set +e; mv ~/.esy AppCache; set -e
           ls -al
@@ -56,3 +57,4 @@ jobs:
             AppDir.tar
             AppCache
             ~/.esy
+            _esy

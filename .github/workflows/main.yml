@@ -41,14 +41,12 @@ jobs:
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
-          rm -rf _release/Onivim2.AppDir
+          sudo rm -rf _release/Onivim2.AppDir
           echo ".esy"
           ls -alh ~/.esy
           echo "$PWD"
-          ls -alh
-          set +e; mv ~/.esy AppCache; set -e
           tar -cvf AppCache ~/.esy
-          rm -rf ~/.esy
+          sudo rm -rf ~/.esy
           ls -alh
           ls -alh ~/
 

@@ -30,6 +30,7 @@ jobs:
       - name: Esy setup
         run: |
           rm -rf ~/.esy
+          rm -rf /esy/store
           docker build --network=host -t centos scripts/docker/centos
           docker container run --rm \
               --name centos \
@@ -48,8 +49,10 @@ jobs:
           echo ".esy"
           ls -alh ~/.esy
           echo "$PWD"
-          tar -cvf AppCache ~/.esy
+          mkdir AppCache
+          cp -r $(find ~/.esy -type d -path '*i/*camomile-opam*/share/camomile') AppCache
           df -H
+          tar -cvf AppCache.tar AppCache
           sudo rm -rf ~/.esy
           df -H
           ls -alh
@@ -62,4 +65,4 @@ jobs:
           prerelease: false
           files: |
             AppDir.tar
-            AppCache
+            AppCache.tar

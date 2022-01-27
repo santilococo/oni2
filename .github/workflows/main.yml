@@ -29,6 +29,7 @@ jobs:
 
       - name: Esy setup
         run: |
+          rm -rf ~/.esy
           docker build --network=host -t centos scripts/docker/centos
           docker container run --rm \
               --name centos \
@@ -40,13 +41,17 @@ jobs:
               --security-opt apparmor:unconfined \
               centos \
               /bin/bash -c 'cd oni2 && ./scripts/docker-build.sh'
+          df -H
           tar -cvf AppDir.tar _release/Onivim2.AppDir
           sudo rm -rf _release/Onivim2.AppDir
+          df -H
           echo ".esy"
           ls -alh ~/.esy
           echo "$PWD"
           tar -cvf AppCache ~/.esy
+          df -H
           sudo rm -rf ~/.esy
+          df -H
           ls -alh
           ls -alh ~/
 

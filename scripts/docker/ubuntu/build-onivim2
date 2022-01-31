@@ -34,6 +34,8 @@
 #esy '@release' run --help
 #esy '@release' create
 
+export ESY__PREFIX=/esy/store
+
 patch -p1 < "$1"
 
 node install-node-deps.js

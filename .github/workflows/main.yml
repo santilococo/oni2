@@ -41,7 +41,7 @@ jobs:
               --device /dev/fuse \
               --security-opt apparmor:unconfined \
               ubuntu \
-              /bin/bash -c 'cd oni2 && ./scripts/docker/ubuntu/build-onivim2 "./scripts/docker/ubuntu/oni2-package.patch"'
+              /bin/bash -c 'cd oni2 && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
           df -H
           tar -cvf AppDir.tar _release/Onivim2.AppDir
           sudo rm -rf _release/Onivim2.AppDir

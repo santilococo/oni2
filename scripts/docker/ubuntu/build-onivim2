@@ -1,39 +1,5 @@
 #!/bin/bash
 
-#set -u 
-#set -e
-#
-#TAG=${1:-master}
-#
-#cd ~
-#
-#if [ ! -d ~/oni2 ]; then
-#  git clone --depth=1 https://github.com/onivim/oni2.git
-#  cd ~/oni2
-#else
-#  cd ~/oni2
-#  git reset --hard HEAD
-#  if [ "${TAG}" = "master" ]; then
-#    git checkout master
-#    git pull --tags
-#  fi
-#fi
-#
-#git checkout ${TAG}
-#
-#patch -p1 < /oni2-package.patch
-#
-#node install-node-deps.js
-#esy install 
-#esy bootstrap
-#esy build
-#esy run -f --checkhealth
-#
-#esy '@release' install
-#esy '@release' run -f --checkhealth
-#esy '@release' run --help
-#esy '@release' create
-
 export ESY__PREFIX=/esy/store
 
 patch -p1 < "$1"
@@ -48,4 +14,3 @@ esy '@release' install
 esy '@release' run -f --checkhealth
 esy '@release' run --help
 esy '@release' create
-

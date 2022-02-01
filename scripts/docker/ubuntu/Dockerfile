@@ -13,6 +13,3 @@ RUN apt -y  update && apt install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g esy@latest --unsafe-perm=true && npm install -g node-gyp
-
-COPY build-onivim2 /build-onivim2
-COPY oni2-package.patch /oni2-package.patch

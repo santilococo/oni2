@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/onivim/oni2/_apis/build/status/onivim.oni2?branchName=master)](https://dev.azure.com/onivim/oni2/_build/latest?definitionId=1?branchName=master)
+[![Build Status](https://github.com/santilococo/oni2/actions/workflows/main.yml/badge.svg)](https://github.com/santilococo/oni2/actions/workflows/main.yml)
 [![Discord](https://img.shields.io/discord/417774914645262338.svg)](https://discord.gg/7maEAxV)
 
 # Onivim 2
@@ -63,8 +63,6 @@ Please also see our [Code of Conduct](./CODE_OF_CONDUCT.md).
 ## License
 
 Onivim 2 source code is licensed under the [MIT](LICENSE.md) license.
-
-Onivim 2 downloads, available at https://v2.onivim.io/, are licensed under the [Outrun Labs EULA 1.1](./Outrun-Labs-EULA-v1.1.md).
 
 #### Third-Party Code
 

@@ -7,9 +7,13 @@
 
 :warning: Currently in alpha - may have bugs or instability - use with caution :warning: 
 
-<p align="center">
-  <img width="800" alt="Onivim 2" src="https://user-images.githubusercontent.com/13532591/109881233-c88cad80-7c2c-11eb-83a1-67a7adcbbd7e.png">
- </p>
+<details>
+  <summary>Click me to see an image of onivim2.</summary>
+  <br>
+  <p align="center">
+    <img width="800" alt="Onivim 2" src="https://user-images.githubusercontent.com/13532591/109881233-c88cad80-7c2c-11eb-83a1-67a7adcbbd7e.png">
+  </p>
+</details>
 
 
 ## Introduction

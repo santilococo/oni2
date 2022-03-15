@@ -3,8 +3,7 @@
 
 # Onivim 2
 
-### Note
-This is a fork of `onivim2` where I will automatically upload the built app (on [releases](https://github.com/santilococo/oni2/releases)) when a new version of `onivim2` is released.
+This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will automatically upload the latest builds (on [releases](https://github.com/santilococo/oni2/releases)) when a new version of `onivim2` is released.
 
 ## Introduction
 

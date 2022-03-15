@@ -3,18 +3,8 @@
 
 # Onivim 2
 
-### Lightweight, Modal Code Editor
-
-:warning: Currently in alpha - may have bugs or instability - use with caution :warning: 
-
-<details>
-  <summary>Click me to see an image of onivim2.</summary>
-  <br>
-  <p align="center">
-    <img width="800" alt="Onivim 2" src="https://user-images.githubusercontent.com/13532591/109881233-c88cad80-7c2c-11eb-83a1-67a7adcbbd7e.png">
-  </p>
-</details>
-
+### Note
+This is a fork of `onivim2` where I will automatically upload the built app (on [releases](https://github.com/santilococo/oni2/releases)) when a new version of `onivim2` is released.
 
 ## Introduction
 
@@ -23,6 +13,14 @@ Onivim 2 is a reimagination of the [Oni](https://www.onivim.io) editor. Onivim 2
 Onivim 2 is built in [`reason`](https://reasonml.github.io) using the [`revery`](https://github.com/revery-ui/revery) framework.
 
 Onivim 2 uses [`libvim`](https://github.com/onivim/libvim) to manage buffers and provide authentic modal editing, and features a fast, native front-end. In addition, Onivim 2 leverages the VSCode Extension Host process in its entirety - meaning, eventually, complete support for VSCode extensions and configuration.
+
+<details>
+  <summary>Click me to see an image of onivim2.</summary>
+  <br>
+  <p align="center">
+    <img width="800" alt="Onivim 2" src="https://user-images.githubusercontent.com/13532591/109881233-c88cad80-7c2c-11eb-83a1-67a7adcbbd7e.png">
+  </p>
+</details>
 
 ### Goals
 
@@ -41,9 +39,11 @@ The goal of this project is to build an editor that doesn't exist today - the _s
 
 ## Download (for Linux)
 
-You need to download a file called `AppDir.tar` which contains the AppImage of `onivim2`. 
+You need to download a file called `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppImage of `onivim2`. 
 
-You can get this file by going to `Releases` or clicking this  [hyperlink](https://github.com/santilococo/oni2/releases/download/v0.5.7/AppDir.tar). 
+You can automatically download this file clicking this [hyperlink](https://github.com/santilococo/oni2/releases/download/v0.5.7/AppDir.tar). 
+
+:warning: Currently in alpha - may have bugs or instability - use with caution :warning: 
 
 ## Documentation
 

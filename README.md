@@ -5,69 +5,28 @@
 
 This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will automatically upload the latest builds (on [releases](https://github.com/santilococo/oni2/releases)) when a new version of `onivim2` is released.
 
-## Introduction
-
-Onivim 2 is a reimagination of the [Oni](https://www.onivim.io) editor. Onivim 2 aims to bring the _speed_ of Sublime, the _language integration_ of VSCode, and the _modal editing experience_ of Vim together, in a single package.
-
-Onivim 2 is built in [`reason`](https://reasonml.github.io) using the [`revery`](https://github.com/revery-ui/revery) framework.
-
-Onivim 2 uses [`libvim`](https://github.com/onivim/libvim) to manage buffers and provide authentic modal editing, and features a fast, native front-end. In addition, Onivim 2 leverages the VSCode Extension Host process in its entirety - meaning, eventually, complete support for VSCode extensions and configuration.
-
-<details>
-  <summary>Click me to see an image of onivim2.</summary>
-  <br>
-  <p align="center">
-    <img width="800" alt="Onivim 2" src="https://user-images.githubusercontent.com/13532591/109881233-c88cad80-7c2c-11eb-83a1-67a7adcbbd7e.png">
-  </p>
-</details>
-
-### Goals
-
-- __Modern UX__ - an experience on par with modern code editors like VSCode and Atom
-- __VSCode Plugin Support__ - use all of the features of VSCode plugins, including language servers and debuggers
-- __Cross-Platform__ - works on Windows, OSX, and Linux
-- __Batteries Included__ - works out of the box
-- __Performance__ - no compromises: native performance, minimal input latency
-- __Easy to Learn__ - Onivim 2 should be comfortable for non-vimmers, too!
-
-The goal of this project is to build an editor that doesn't exist today - the _speed_ of a native code editor like Sublime, the _power_ of modal editing, and the _rich tooling_ that comes with a lightweight editor like VSCode.
-
-### Non-goals
-
-- __100% VimL compatibility__ - we may not support all features of VimL plugins / configuration.
 
 ## Download (for Linux)
 
-You need to download a file called `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppImage of `onivim2`. 
+You need to download `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppDir of `onivim2`. Then, to build the AppImage, you need to download [appimagetool](https://appimage.github.io/appimagetool) and run:
+```
+tar -xf AppDir.tar
+cd _release
+ARCH=x86_64 appimagetool Onivim2.AppDir
+```
 
-You can automatically download this file clicking this [hyperlink](https://github.com/santilococo/oni2/releases/download/v0.5.7/AppDir.tar). 
+Finally, you need to move some files to `/usr` (you may need root privileges):
+```
+mv Onivim2-x86_64.AppImage /usr/local/bin/Oni2
+mv Onivim2.AppDir/Onivim2.desktop /usr/share/applications
+mv Onivim2.AppDir/Onivim2.png /usr/share/icons
+```
 
-:warning: Currently in alpha - may have bugs or instability - use with caution :warning: 
+You can automatically download `AppDir.tar` clicking this [hyperlink](https://github.com/santilococo/oni2/releases/download/v0.5.7/AppDir.tar). 
 
 ## Documentation
 
-- Onivim User Manual
-  - [Getting Started](https://onivim.github.io/docs/getting-started/why-onivim)
-  - [Basic Usage](https://onivim.github.io/docs/using-onivim/moving-in-onivim)
-  - [FAQ](https://onivim.github.io/docs/other/faq)
-
-## Contributing
-
-We'd :heart: help building Onivim 2!
-
-If you are interested in fixing issues and contributing directly to the code, please see the [How to Contribute](https://onivim.github.io/docs/for-developers/contributing) document, which includes the following:
-
-- [How to build and run from source](https://onivim.github.io/docs/for-developers/building)
-- [Pull Request Guidelines](https://onivim.github.io/docs/for-developers/contributing)
-
-Please also see our [Code of Conduct](./CODE_OF_CONDUCT.md).
-
-## Feedback
-
-- [Tweet us](https://twitter.com/oni_vim) with feedback
-- Come visit us on [Discord](https://discord.gg/7maEAxV)
-- Join the discussion on [Reddit](https://reddit.com/r/onivim)
-- [File an issue](https://github.com/onivim/oni2/issues) on GitHub
+See [README](https://github.com/onivim/oni2#onivim-2).
 
 ## License
 

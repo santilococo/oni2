@@ -8,7 +8,7 @@ This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will automat
 
 ## Download (for Linux)
 
-You need to download `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppDir of `onivim2`. Then, to build the AppImage, you need to download [appimagetool](https://appimage.github.io/appimagetool) and run:
+First, you need to download `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppDir of `onivim2`. Then, to build the AppImage, you need to download [appimagetool](https://appimage.github.io/appimagetool) and run:
 ```
 tar -xf AppDir.tar
 cd _release

@@ -35,5 +35,3 @@ Onivim 2 source code is licensed under the [MIT](LICENSE.md) license.
 #### Third-Party Code
 
 Several dependencies have their own set of license terms here: [ThirdPartyLicenses.txt](ThirdPartyLicenses.txt)
-
-Copyright (c) 2019-2020 Outrun Labs, LLC.

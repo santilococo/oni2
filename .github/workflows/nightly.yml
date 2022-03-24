@@ -1,0 +1,56 @@
+name: CI-nightly
+
+on:  
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Delete
+        uses: jimschubert/delete-artifacts-action@v1
+        with:
+          log_level: 'debug'
+          min_bytes: '0'
+          
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: Get latest tag
+        id: getTag
+        run: |
+          GIT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo ::set-output name=gitTag::${GIT_TAG}
+          
+      - name: Esy setup
+        run: |
+          rm -rf ~/.esy
+          rm -rf /esy/store
+          docker build --network=host -t ubuntu scripts/docker/ubuntu
+          docker container run --rm \
+              --name ubuntu \
+              --network=host \
+              --volume `pwd`:/oni2 \
+              --volume ~/.esy:/esy/store \
+              --cap-add SYS_ADMIN \
+              --device /dev/fuse \
+              --security-opt apparmor:unconfined \
+              ubuntu \
+              /bin/bash -c 'cd oni2 && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
+          tar -cvf AppDir.tar _release/Onivim2.AppDir
+          sudo rm -rf _release/Onivim2.AppDir
+          mkdir AppCache
+          cp -r $(find ~/.esy -type d -path '*i/*camomile-opam*/share/camomile') AppCache
+          tar -cvf AppCache.tar AppCache
+          sudo rm -rf ~/.esy
+          
+      - uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: ${{ steps.getTag.outputs.gitTag }}
+          prerelease: false
+          files: |
+            AppDir.tar
+            AppCache.tar

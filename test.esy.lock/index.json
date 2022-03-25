@@ -621,10 +621,10 @@
     "esy-skia@github:santilococo/esy-skia#e71106f@d41d8cd9": {
       "id": "esy-skia@github:santilococo/esy-skia#e71106f@d41d8cd9",
       "name": "esy-skia",
-      "version": "github:santilococo/esy-skia#e71106f@d41d8cd9",
+      "version": "github:santilococo/esy-skia#e71106f",
       "source": {
         "type": "install",
-        "source": [ "github:santilococo/esy-skia#e71106f@d41d8cd9" ]
+        "source": [ "github:santilococo/esy-skia#e71106f" ]
       },
       "overrides": [],
       "dependencies": [

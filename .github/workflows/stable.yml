@@ -53,5 +53,5 @@ jobs:
           commit: "stable"
           name: ${{ steps.getTag.outputs.gitTag }}
           tag: ${{ steps.getTag.outputs.gitTag }}
-          body: "${{ steps.getVariables.outputs.gitTag }} stable release."
+          body: "Stable release."
           token: ${{ secrets.GITHUB_TOKEN }}

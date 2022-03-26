@@ -17,7 +17,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          
+          ref: stable
+                    
       - name: Get latest tag
         id: getTag
         run: |
@@ -46,11 +47,11 @@ jobs:
           tar -cvf AppCache.tar AppCache
           sudo rm -rf ~/.esy
 
-      - uses: marvinpinto/action-automatic-releases@latest
+      - uses: ncipollo/release-action@v1.9.0
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: ${{ steps.getTag.outputs.gitTag }}
-          prerelease: false
-          files: |
-            AppDir.tar
-            AppCache.tar
+          artifacts: "AppDir.tar, AppCache.tar"
+          commit: "stable"
+          name: ${{ steps.getTag.outputs.gitTag }}
+          tag: ${{ steps.getTag.outputs.gitTag }}
+          body: "${{ steps.getVariables.outputs.gitTag }} stable release."
+          token: ${{ secrets.GITHUB_TOKEN }}

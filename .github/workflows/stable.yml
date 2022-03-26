@@ -2,6 +2,8 @@ name: CI-stable
 
 on:
   push:
+    branches:
+      - stable
     tags:
       - '*'
   workflow_dispatch:

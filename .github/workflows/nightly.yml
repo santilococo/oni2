@@ -17,13 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          
-      - name: Get latest tag
-        id: getTag
-        run: |
-          GIT_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
-          echo ::set-output name=gitTag::${GIT_TAG}
-          
+        
       - name: Esy setup
         run: |
           rm -rf ~/.esy
@@ -49,8 +43,8 @@ jobs:
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: ${{ steps.getTag.outputs.gitTag }}-nightly
-          prerelease: false
+          automatic_release_tag: nightly
+          prerelease: true
           files: |
             AppDir.tar
             AppCache.tar

@@ -4,15 +4,22 @@
 
 # Onivim 2
 
-This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will automatically upload the latest builds when a new version of `onivim2` is released.
+This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will automatically upload the latest builds when a new version is released.
 
-## Download (for Linux)
+## Table of Contents
+* [Download (for Linux)](#download)
+  - [Arch-based distributions](#download-arch)
+  - [Other distributions](#download-other)
+* [Documentation](#documentation)
+* [License](#license)
 
-### Arch-based distributions
+## Download (for Linux) <a name="download"></a>
+
+### Arch-based distributions <a name="download-arch"></a>
 
 Download the AUR package [onvim2-bin](https://aur.archlinux.org/packages/onivim2-bin) with the AUR helper of your choice. 
 
-### Other distributions
+### Other distributions <a name="download-other"></a>
 
 First, you need to download `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppDir of `onivim2`. You can choose the stable release or the nightly release. 
 
@@ -32,11 +39,11 @@ mv Onivim2.AppDir/Onivim2.png /usr/share/icons
 
 You can automatically download `AppDir.tar` (from the stable release) clicking this [hyperlink](https://github.com/santilococo/oni2/releases/download/v0.5.7/AppDir.tar). 
 
-## Documentation
+## Documentation <a name="documentation"></a>
 
 See [README](https://github.com/onivim/oni2#onivim-2).
 
-## License
+## License <a name="license"></a>
 
 Onivim 2 source code is licensed under the [MIT](LICENSE.md) license.
 

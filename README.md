@@ -6,8 +6,13 @@
 
 This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will automatically upload the latest builds when a new version of `onivim2` is released.
 
-
 ## Download (for Linux)
+
+### Arch-based distributions
+
+Download the AUR package [onvim2-bin](https://aur.archlinux.org/packages/onivim2-bin) with the AUR helper of your choice. 
+
+### Other distributions
 
 First, you need to download `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppDir of `onivim2`. You can choose the stable release or the nightly release. 
 

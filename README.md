@@ -4,7 +4,7 @@
 
 # Onivim 2
 
-This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will automatically upload the latest builds when a new version is released.
+This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will upload the latest builds (both stable and nightly).
 
 ## Table of Contents
 * [Download (for Linux)](#download)
@@ -41,7 +41,7 @@ You can automatically download `AppDir.tar` (from the stable release) clicking t
 
 ## Documentation <a name="documentation"></a>
 
-See [README](https://github.com/onivim/oni2#onivim-2).
+See [Documentation](https://github.com/onivim/oni2#documentation).
 
 ## License <a name="license"></a>
 

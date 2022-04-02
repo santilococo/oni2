@@ -37,8 +37,6 @@ mv Onivim2.AppDir/Onivim2.desktop /usr/share/applications
 mv Onivim2.AppDir/Onivim2.png /usr/share/icons
 ```
 
-You can automatically download `AppDir.tar` (from the stable release) clicking this [hyperlink](https://github.com/santilococo/oni2/releases/download/v0.5.7/AppDir.tar). 
-
 ## Documentation <a name="documentation"></a>
 
 See [Documentation](https://github.com/onivim/oni2#documentation).

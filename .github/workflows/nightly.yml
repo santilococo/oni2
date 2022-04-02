@@ -40,10 +40,19 @@ jobs:
           tar -cvf AppCache.tar AppCache
           sudo rm -rf ~/.esy
           
+          #     - uses: marvinpinto/action-automatic-releases@latest
+          #       with:
+          #         repo_token: ${{ secrets.GITHUB_TOKEN }}
+          #         automatic_release_tag: nightly
+          #         prerelease: true
+          #         files: |
+          #           AppDir.tar
+          #           AppCache.tar
+
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: nightly
+          automatic_release_tag: nightly-debug
           prerelease: true
           files: |
             AppDir.tar

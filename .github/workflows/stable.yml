@@ -47,11 +47,20 @@ jobs:
           tar -cvf AppCache.tar AppCache
           sudo rm -rf ~/.esy
 
-      - uses: ncipollo/release-action@v1.9.0
+          #     - uses: ncipollo/release-action@v1.9.0
+          #       with:
+          #         artifacts: "AppDir.tar, AppCache.tar"
+          #         commit: "stable"
+          #         name: ${{ steps.getTag.outputs.gitTag }}
+          #         tag: ${{ steps.getTag.outputs.gitTag }}
+          #         body: "Stable release."
+          #         token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: marvinpinto/action-automatic-releases@latest
         with:
-          artifacts: "AppDir.tar, AppCache.tar"
-          commit: "stable"
-          name: ${{ steps.getTag.outputs.gitTag }}
-          tag: ${{ steps.getTag.outputs.gitTag }}
-          body: "Stable release."
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: stable-debug
+          prerelease: true
+          files: |
+            AppDir.tar
+            AppCache.tar

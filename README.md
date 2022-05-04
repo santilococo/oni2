@@ -1,5 +1,3 @@
-[![Build Status Stable](https://github.com/santilococo/oni2/actions/workflows/stable.yml/badge.svg)](https://github.com/santilococo/oni2/actions/workflows/main.yml)
-[![Build Status Nightly](https://github.com/santilococo/oni2/actions/workflows/nightly.yml/badge.svg)](https://github.com/santilococo/oni2/actions/workflows/main.yml)
 [![Discord](https://img.shields.io/discord/417774914645262338.svg)](https://discord.gg/7maEAxV)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

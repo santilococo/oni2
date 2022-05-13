@@ -38,6 +38,8 @@ mv Onivim2.AppDir/Onivim2.desktop /usr/share/applications
 mv Onivim2.AppDir/Onivim2.png /usr/share/icons
 ```
 
+After that, if `/usr/local/bin` is in your `PATH`, you can simply run `Oni2` in your terminal or application launcher.
+
 ## Documentation <a name="documentation"></a>
 
 See [Documentation](https://github.com/onivim/oni2#documentation).

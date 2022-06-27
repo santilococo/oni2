@@ -52,3 +52,4 @@ jobs:
           files: |
             AppDir.tar
             AppCache.tar
+            appimagetool-x86_64.AppImage

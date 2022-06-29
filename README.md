@@ -20,17 +20,9 @@ Download the AUR package [onvim2-bin](https://aur.archlinux.org/packages/onivim2
 
 ### Other distributions <a name="download-other"></a>
 
-First, you need to download `AppDir.tar` from [releases](https://github.com/santilococo/oni2/releases) which contains the AppDir of `onivim2`. You can choose the stable release or the nightly release. 
+First, you need to download `Onivim2-x86_64.AppImage` from [releases](https://github.com/santilococo/oni2/releases), which is the AppImage of `onivim2`. You can choose the stable release or the nightly release. 
 
-Then, to build the AppImage, you need to download [appimagetool](https://appimage.github.io/appimagetool) and run:
-
-```bash
-tar -xf AppDir.tar
-cd _release
-ARCH=x86_64 appimagetool Onivim2.AppDir
-```
-
-Finally, you need to move some files to `/usr` (you may need root privileges):
+Then, you need to move some files to `/usr` (you may need root privileges):
 
 ```bash
 mv Onivim2-x86_64.AppImage /usr/local/bin/Oni2

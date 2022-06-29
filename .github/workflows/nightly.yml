@@ -37,7 +37,8 @@ jobs:
           mkdir AppCache
           cp -r $(find ~/.esy -type d -path '*i/*camomile-opam*/share/camomile') AppCache
           tar -cvf AppCache.tar AppCache
-          sudo rm -rf ~/.esy
+          rm -rf ~/.esy
+          rm -rf _release/Onivim2.AppDir
           
       - name: Build appimage
         run: |
@@ -45,7 +46,7 @@ jobs:
           wget -O appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod a+x appimagetool
           ARCH=x86_64 ./appimagetool _release/Onivim2.AppDir
-          sudo rm -rf _release/Onivim2.AppDir
+          rm -rf _release/Onivim2.AppDir
           
       - uses: marvinpinto/action-automatic-releases@latest
         with:

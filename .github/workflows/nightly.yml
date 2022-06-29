@@ -42,6 +42,7 @@ jobs:
           
       - name: Build appimage
         run: |
+          chmod -R a+rw .
           tar -xf AppDir.tar
           wget -O appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod a+x appimagetool

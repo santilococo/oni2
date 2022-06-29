@@ -34,6 +34,10 @@ jobs:
               ubuntu \
               /bin/bash -c 'cd oni2 && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
           tar -cvf AppDir.tar _release/Onivim2.AppDir
+          wget "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage"
+          chmod a+x appimagetool-x86_64.AppImage
+          mv appimagetool-x86_64.AppImage appimagetool
+          ARCH=x86_64 ./appimagetool _release/Onivim2.AppDir
           sudo rm -rf _release/Onivim2.AppDir
           mkdir AppCache
           cp -r $(find ~/.esy -type d -path '*i/*camomile-opam*/share/camomile') AppCache
@@ -48,3 +52,4 @@ jobs:
           files: |
             AppDir.tar
             AppCache.tar
+            Onivim2-x86_64.AppImage

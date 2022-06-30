@@ -33,7 +33,7 @@ jobs:
               --security-opt apparmor:unconfined \
               ubuntu \
               /bin/bash -c 'chown -R root oni2 && cd oni2 && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
-          chown -R "$(id -u -n)" _release/Onivim2.AppDir
+          sudo chown -R "$(id -u -n)" _release/Onivim2.AppDir
           tar -cvf AppDir.tar _release/Onivim2.AppDir
           mkdir AppCache
           cp -r $(find ~/.esy -type d -path '*i/*camomile-opam*/share/camomile') AppCache

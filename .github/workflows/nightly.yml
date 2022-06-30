@@ -22,9 +22,9 @@ jobs:
         run: |
           rm -rf ~/.esy
           rm -rf /esy/store
+          git config --global --add safe.directory '/__w/'
           docker build --network=host -t ubuntu scripts/docker/ubuntu
           docker container run --rm \
-              --user "$(id -u):$(id -g)" \
               --name ubuntu \
               --network=host \
               --volume `pwd`:/oni2 \

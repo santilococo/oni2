@@ -22,7 +22,6 @@ jobs:
         run: |
           rm -rf ~/.esy
           rm -rf /esy/store
-          #git config --global --add safe.directory '/__w/'
           docker build --network=host -t ubuntu scripts/docker/ubuntu
           docker container run --rm \
               --name ubuntu \
@@ -33,7 +32,8 @@ jobs:
               --device /dev/fuse \
               --security-opt apparmor:unconfined \
               ubuntu \
-              /bin/bash -c 'chown -R root oni2 && ls -n / | grep oni2 && cd oni2 && id && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
+              /bin/bash -c 'chown -R root oni2 && cd oni2 && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
+          chown -R "$(id -u -n)" _release/Onivim2.AppDir
           tar -cvf AppDir.tar _release/Onivim2.AppDir
           mkdir AppCache
           cp -r $(find ~/.esy -type d -path '*i/*camomile-opam*/share/camomile') AppCache
@@ -44,7 +44,6 @@ jobs:
       - name: Build appimage
         run: |
           sudo tar -xf AppDir.tar
-          #sudo chmod -R a+rw _release/Onivim2.AppDir
           wget -O appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod a+x appimagetool
           ARCH=x86_64 ./appimagetool _release/Onivim2.AppDir

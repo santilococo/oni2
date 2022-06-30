@@ -4,9 +4,6 @@ export ESY__PREFIX=/esy/store
 
 patch -p1 < "$1"
 
-git --version
-exit
-
 node install-node-deps.js
 esy install 
 esy bootstrap

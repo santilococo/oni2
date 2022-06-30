@@ -3,8 +3,11 @@ FROM ubuntu:focal
 env DEBIAN_FRONTEND noninteractive
 
 RUN whoami
+RUN id
+RUN adduser -D -S -h /home/runner runner
 RUN su runner
 RUN whoami
+RUN id
 
 RUN exit
 

@@ -20,6 +20,9 @@ jobs:
         
       - name: Esy setup
         run: |
+          id
+          ls -n / | grep oni2
+          exit 1
           rm -rf ~/.esy
           rm -rf /esy/store
           docker build --network=host -t ubuntu scripts/docker/ubuntu

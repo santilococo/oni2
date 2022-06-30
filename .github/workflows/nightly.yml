@@ -22,7 +22,7 @@ jobs:
         run: |
           id
           docker build --network=host -t ubuntu scripts/docker/ubuntu
-          docker container run --rm \
+          sudo -u runner docker container run --rm \
               --user "$(id -u):$(id -g)"
               --name ubuntu \
               --network=host \

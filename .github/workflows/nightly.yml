@@ -23,16 +23,6 @@ jobs:
           id
           docker build --network=host -t ubuntu scripts/docker/ubuntu
           docker container run --rm \
-              --name ubuntu \
-              --network=host \
-              --volume `pwd`:/oni2 \
-              --volume ~/.esy:/esy/store \
-              --cap-add SYS_ADMIN \
-              --device /dev/fuse \
-              --security-opt apparmor:unconfined \
-              ubuntu \
-              /bin/bash -c 'cd oni2 && id && ls -n / | grep oni2'
-          docker container run --rm \
               --user "$(id -u):$(id -g)"
               --name ubuntu \
               --network=host \

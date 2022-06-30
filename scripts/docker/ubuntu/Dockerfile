@@ -2,6 +2,12 @@ FROM ubuntu:focal
 
 env DEBIAN_FRONTEND noninteractive
 
+RUN whoami
+RUN su runner
+RUN whoami
+
+RUN exit
+
 RUN apt -y  update && apt install -y \
    git sudo curl clang gcc g++ make unzip python m4 wget \ 
    nasm libacl1-dev  libncurses-dev libbz2-dev   \

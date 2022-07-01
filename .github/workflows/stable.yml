@@ -39,16 +39,22 @@ jobs:
               --device /dev/fuse \
               --security-opt apparmor:unconfined \
               ubuntu \
-              /bin/bash -c 'cd oni2 && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
+              /bin/bash -c 'chown -R root oni2 && cd oni2 && ./scripts/docker-ubuntu-build.sh "./scripts/patches/package.patch"'
+          sudo chown -R "$(id -u -n)" ../oni2
           tar -cvf AppDir.tar _release/Onivim2.AppDir
-          wget -O appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
-          chmod a+x appimagetool
-          ARCH=x86_64 ./appimagetool _release/Onivim2.AppDir
-          sudo rm -rf _release/Onivim2.AppDir
           mkdir AppCache
           cp -r $(find ~/.esy -type d -path '*i/*camomile-opam*/share/camomile') AppCache
           tar -cvf AppCache.tar AppCache
           sudo rm -rf ~/.esy
+          sudo rm -rf _release/Onivim2.AppDir
+
+      - name: Build appimage
+        run: |
+          tar -xf AppDir.tar
+          wget -O appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod a+x appimagetool
+          ARCH=x86_64 ./appimagetool _release/Onivim2.AppDir
+          sudo rm -rf _release/Onivim2.AppDir
 
       - uses: ncipollo/release-action@v1.9.0
         with:

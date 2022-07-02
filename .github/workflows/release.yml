@@ -1,0 +1,41 @@
+
+name: CI-release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Delete
+        uses: jimschubert/delete-artifacts-action@v1
+        with:
+          log_level: 'debug'
+          min_bytes: '0'
+          
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: stable
+                    
+      - name: Get latest tag
+        id: getTag
+        run: |
+          GIT_TAG=$(git tag -l | sort | tail -n1)
+          echo ::set-output name=gitTag::${GIT_TAG}
+          
+      - name: Build appimage
+        run: |
+          wget -O appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+          
+      - uses: ncipollo/release-action@v1.9.0
+        with:
+          artifacts: "appimagetool"
+          commit: "stable"
+          name: ${{ steps.getTag.outputs.gitTag }}
+          tag: ${{ steps.getTag.outputs.gitTag }}
+          body: "Stable release."
+          token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true

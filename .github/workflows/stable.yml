@@ -64,3 +64,4 @@ jobs:
           tag: ${{ steps.getTag.outputs.gitTag }}
           body: "Stable release."
           token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true

@@ -12,13 +12,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: stable
-                    
-      - name: Get latest tag
-        id: getTag
-        run: |
-          GIT_TAG=$(git tag -l | sort | tail -n1)
-          echo ::set-output name=gitTag::${GIT_TAG}
-          
+                              
       - name: Esy setup
         run: |
           npm install -g esy@latest

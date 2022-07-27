@@ -7,13 +7,7 @@ jobs:
   build:
     runs-on: windows-latest
 
-    steps:
-      - name: Delete
-        uses: jimschubert/delete-artifacts-action@v1
-        with:
-          log_level: 'debug'
-          min_bytes: '0'
-          
+    steps:         
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0

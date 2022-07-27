@@ -1,0 +1,45 @@
+name: CI-windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Delete
+        uses: jimschubert/delete-artifacts-action@v1
+        with:
+          log_level: 'debug'
+          min_bytes: '0'
+          
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: stable
+                    
+      - name: Get latest tag
+        id: getTag
+        run: |
+          GIT_TAG=$(git tag -l | sort | tail -n1)
+          echo ::set-output name=gitTag::${GIT_TAG}
+          
+      - name: Esy setup
+        run: |
+          npm install -g esy@latest
+          npm install -g windows-build-tools
+          npm install -g node-gyp
+          node-gyp install 14.15.4
+          node install-node-deps.js
+          esy install
+          esy bootstrap
+          esy build
+          ./scripts/windows/publish.ps1
+          tar -cvf AppDir.tar _publish
+          
+      - uses: actions/upload-artifact@v3
+        with: 
+          name: AppDirWindows
+          path: AppDir.tar
+                   

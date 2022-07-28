@@ -12,6 +12,8 @@ jobs:
         with:
           fetch-depth: 0
           ref: stable
+          
+      - uses: lukka/get-cmake@latest
                               
       - name: Esy setup
         run: |

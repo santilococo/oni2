@@ -91,13 +91,13 @@
       ],
       "devDependencies": []
     },
-    "revery@github:revery-ui/revery#dd10c87@d41d8cd9": {
-      "id": "revery@github:revery-ui/revery#dd10c87@d41d8cd9",
+    "revery@github:santilococo/revery#b738391@d41d8cd9": {
+      "id": "revery@github:santilococo/revery#b738391@d41d8cd9",
       "name": "revery",
-      "version": "github:revery-ui/revery#dd10c87",
+      "version": "github:santilococo/revery#b738391",
       "source": {
         "type": "install",
-        "source": [ "github:revery-ui/revery#dd10c87" ]
+        "source": [ "github:santilococo/revery#b738391" ]
       },
       "overrides": [],
       "dependencies": [
@@ -839,7 +839,7 @@
       },
       "overrides": [],
       "dependencies": [
-        "revery@github:revery-ui/revery#dd10c87@d41d8cd9",
+        "revery@github:santilococo/revery#b738391@d41d8cd9",
         "rench@1.10.0@d41d8cd9",
         "reason-native-crash-utils@github:onivim/reason-native-crash-utils#a80a9d9@d41d8cd9",
         "reason-fzy@github:bryphe/reason-fzy#5a1daf4@d41d8cd9",

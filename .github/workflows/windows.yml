@@ -24,7 +24,7 @@ jobs:
           node install-node-deps.js
           esy install
           esy bootstrap
-          esy build
+          esy build --verbosity=debug
           ./scripts/windows/publish.ps1
           tar -cvf AppDir.tar _publish
           

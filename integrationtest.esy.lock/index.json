@@ -91,13 +91,13 @@
       ],
       "devDependencies": []
     },
-    "revery@github:santilococo/revery#b738391@d41d8cd9": {
-      "id": "revery@github:santilococo/revery#b738391@d41d8cd9",
+    "revery@github:revery-ui/revery#dd10c87@d41d8cd9": {
+      "id": "revery@github:revery-ui/revery#dd10c87@d41d8cd9",
       "name": "revery",
-      "version": "github:santilococo/revery#b738391",
+      "version": "github:revery-ui/revery#dd10c87",
       "source": {
         "type": "install",
-        "source": [ "github:santilococo/revery#b738391" ]
+        "source": [ "github:revery-ui/revery#dd10c87" ]
       },
       "overrides": [],
       "dependencies": [
@@ -682,7 +682,7 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "@revery/esy-cmake@0.3.5001@d41d8cd9" ],
+      "dependencies": [ "esy-cmake@0.3.5@d41d8cd9" ],
       "devDependencies": []
     },
     "esy-libjpeg-turbo@github:revery-ui/libjpeg-turbo#dbb3dd5@d41d8cd9": {
@@ -725,7 +725,21 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "@revery/esy-cmake@0.3.5001@d41d8cd9" ],
+      "dependencies": [ "esy-cmake@0.3.5@d41d8cd9" ],
+      "devDependencies": []
+    },
+    "esy-cmake@0.3.5@d41d8cd9": {
+      "id": "esy-cmake@0.3.5@d41d8cd9",
+      "name": "esy-cmake",
+      "version": "0.3.5",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://registry.npmjs.org/esy-cmake/-/esy-cmake-0.3.5.tgz#sha1:2df0bdfe9317fbcded5f463fca1f346464494c7a"
+        ]
+      },
+      "overrides": [],
+      "dependencies": [],
       "devDependencies": []
     },
     "esy-angle-prebuilt@1.0.0@d41d8cd9": {
@@ -839,7 +853,7 @@
       },
       "overrides": [ "integrationtest.json" ],
       "dependencies": [
-        "revery@github:santilococo/revery#b738391@d41d8cd9",
+        "revery@github:revery-ui/revery#dd10c87@d41d8cd9",
         "rench@1.10.0@d41d8cd9",
         "reason-native-crash-utils@github:onivim/reason-native-crash-utils#a80a9d9@d41d8cd9",
         "reason-fzy@github:bryphe/reason-fzy#5a1daf4@d41d8cd9",

@@ -27,6 +27,7 @@ Then, if you want `Oni2` to appear in the application menu/launcher, you need to
 Finally, you need to move some files to `/usr` (you may need root privileges):
 
 ```bash
+chmod u+x Onivim2-x86_64.AppImage
 mv Onivim2-x86_64.AppImage /usr/local/bin/Oni2
 ```
 

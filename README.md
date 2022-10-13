@@ -3,7 +3,7 @@
 
 # Onivim 2
 
-This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will upload the latest builds (both stable and nightly).
+This is a fork of [Onivim 2](https://github.com/onivim/oni2) where I will upload the latest builds (both stable and nightly).
 
 ## Table of Contents
 * [Download (for Linux)](#download)
@@ -16,7 +16,7 @@ This is a fork of [Onivim 2](https://github.com/onivim/oni) where I will upload 
 
 ### Arch-based distributions <a name="download-arch"></a>
 
-Download the AUR package [onvim2-bin](https://aur.archlinux.org/packages/onivim2-bin) with the AUR helper of your choice. 
+Download [onvim2-bin](https://aur.archlinux.org/packages/onivim2-bin) or [onivim2-nightly-bin](https://aur.archlinux.org/packages/onivim2-nightly-bin) with the AUR helper of your choice. 
 
 ### Other distributions <a name="download-other"></a>
 

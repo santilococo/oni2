@@ -35,7 +35,7 @@ And if you also downloaded the desktop file and logo:
 
 ```bash
 mv Onivim2.desktop /usr/share/applications
-mv Onivim2.png /usr/share/icons
+mv logo.png /usr/share/icons/Onivim2.png
 ```
 
 After that, if `/usr/local/bin` is in your `PATH`, you can simply run `Oni2` in your terminal or application launcher.
@@ -46,4 +46,4 @@ See [Documentation](https://github.com/onivim/oni2#documentation).
 
 ## License <a name="license"></a>
 
-See [MIT](LICENSE.md) and [ThirdPartyLicenses.txt](ThirdPartyLicenses.txt).
+See [LICENSE](LICENSE.md) and [ThirdPartyLicenses](ThirdPartyLicenses.txt).

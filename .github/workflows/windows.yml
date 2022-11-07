@@ -13,7 +13,12 @@ jobs:
           fetch-depth: 0
           ref: stable
           
-      - uses: lukka/get-cmake@latest
+      - uses: egor-tensin/setup-cygwin@v3
+        with:
+          platform: x64
+          packages: cmake gcc-g++
+          
+      #- uses: lukka/get-cmake@latest
                               
       - name: Esy setup
         run: |

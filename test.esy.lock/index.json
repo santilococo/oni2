@@ -682,7 +682,7 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "esy-cmake@0.3.5@d41d8cd9" ],
+      "dependencies": [ "github:santilococo/esy-cmake#cea01e8" ],
       "devDependencies": []
     },
     "esy-libjpeg-turbo@github:revery-ui/libjpeg-turbo#dbb3dd5@d41d8cd9": {
@@ -725,11 +725,11 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "esy-cmake@0.3.5@d41d8cd9" ],
+      "dependencies": [ "github:santilococo/esy-cmake#cea01e8" ],
       "devDependencies": []
     },
-    "esy-cmake@0.3.5@d41d8cd9": {
-      "id": "esy-cmake@0.3.5@d41d8cd9",
+    "github:santilococo/esy-cmake#cea01e8": {
+      "id": "github:santilococo/esy-cmake#cea01e8",
       "name": "esy-cmake",
       "version": "0.3.5",
       "source": {

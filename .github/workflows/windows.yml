@@ -13,13 +13,10 @@ jobs:
           fetch-depth: 0
           ref: stable
           
-      - uses: egor-tensin/setup-cygwin@v3
+      - uses: cygwin/cygwin-install-action@master
         with:
-          platform: x64
-          #packages: cmake gcc-g++
-          
-      #- uses: lukka/get-cmake@latest
-                              
+           packages: cmake
+                                        
       - name: Esy setup
         run: |
           npm install -g esy@latest
@@ -32,6 +29,7 @@ jobs:
           esy build --verbosity=debug
           ./scripts/windows/publish.ps1
           tar -cvf AppDir.tar _publish
+        shell: C:\cygwin\bin\bash.exe --noprofile --norc -o igncr -eo pipefail '{0}'
           
       - uses: actions/upload-artifact@v3
         with: 

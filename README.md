@@ -20,11 +20,11 @@ Download [onvim2-bin](https://aur.archlinux.org/packages/onivim2-bin) or [onivim
 
 ### Other distributions <a name="download-other"></a>
 
-First, you need to download `Onivim2-x86_64.AppImage` from [releases](https://github.com/santilococo/oni2/releases), which is the AppImage of `onivim2`. You can choose the stable release or the nightly release. 
+First, you need to download `Onivim2-x86_64.AppImage` from [releases](https://github.com/santilococo/oni2/releases), which is the AppImage of `onivim2`. You can choose the stable or the nightly release. 
 
-Then, if you want `Oni2` to appear in the application menu/launcher, you need to download the [desktop file](https://raw.githubusercontent.com/santilococo/oni2/master/scripts/linux/Onivim2.desktop) and [logo](https://raw.githubusercontent.com/santilococo/oni2/master/assets/images/logo.png).
+Then, if you want `Oni2` to appear in your application menu/launcher, you need to download the [desktop file](https://raw.githubusercontent.com/santilococo/oni2/master/scripts/linux/Onivim2.desktop) and [logo](https://raw.githubusercontent.com/santilococo/oni2/master/assets/images/logo.png).
 
-Finally, you need to move some files to `/usr` (you may need root privileges):
+Finally, you need to move the files to `/usr` (you may need root privileges):
 
 ```bash
 chmod u+x Onivim2-x86_64.AppImage

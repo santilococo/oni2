@@ -730,7 +730,7 @@
     },
     "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd9": {
       "id": "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd9",
-      "name": "esu-cmake",
+      "name": "esy-cmake",
       "version": "github:santilococo/esy-cmake#cea01e8",
       "source": {
         "type": "install",

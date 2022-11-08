@@ -682,7 +682,7 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "@santilococo/esy-cmake#cea01e8@d41d8cd9" ],
+      "dependencies": [ "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd9" ],
       "devDependencies": []
     },
     "esy-libjpeg-turbo@github:revery-ui/libjpeg-turbo#dbb3dd5@d41d8cd9": {
@@ -697,7 +697,7 @@
       "overrides": [],
       "dependencies": [
         "esy-nasm@github:revery-ui/esy-nasm#64a802b@d41d8cd9",
-        "@santilococo/esy-cmake#cea01e8@d41d8cd9",
+        "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd9",
         "@esy-cross/ninja-build@1.8.2001@d41d8cd9"
       ],
       "devDependencies": []

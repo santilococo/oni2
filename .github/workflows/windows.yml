@@ -22,11 +22,17 @@ jobs:
           esy install
           esy bootstrap
           esy build --verbosity=debug
-          ls -al
-          cd _esy || echo "no _esy"
-          ls -al
-          cd oni2 || echo "no oni2"
-          ls -al
+          esy run -f --checkhealth
+          esy '@release' install
+          esy '@release' run -f --checkhealth
+          esy '@release' run --help
+          esy '@release' create
+          ls -al || echo "chau"
+          find -H . || echo "hola"
+          #cd _esy || echo "no _esy"
+          #ls -al
+          #cd oni2 || echo "no oni2"
+          #ls -al
           ./scripts/windows/publish.ps1
           tar -cvf AppDir.tar _publish
           

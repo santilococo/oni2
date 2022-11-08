@@ -11,10 +11,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          
-      #- uses: cygwin/cygwin-install-action@master
-      #  with:
-      #     packages: cmake
                                         
       - name: Esy setup
         run: |
@@ -26,9 +22,13 @@ jobs:
           esy install
           esy bootstrap
           esy build --verbosity=debug
+          ls -al
+          cd _esy || echo "no _esy"
+          ls -al
+          cd oni2 || echo "no oni2"
+          ls -al
           ./scripts/windows/publish.ps1
           tar -cvf AppDir.tar _publish
-        #shell: C:\cygwin\bin\bash.exe --noprofile --norc -o igncr -eo pipefail '{0}'
           
       - uses: actions/upload-artifact@v3
         with: 

@@ -682,7 +682,7 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "esy-cmake@0.3.5@d41d8cd9" ],
+      "dependencies": [ "@santilococo/esy-cmake#cea01e8@d41d8cd9" ],
       "devDependencies": []
     },
     "esy-libjpeg-turbo@github:revery-ui/libjpeg-turbo#dbb3dd5@d41d8cd9": {
@@ -697,7 +697,7 @@
       "overrides": [],
       "dependencies": [
         "esy-nasm@github:revery-ui/esy-nasm#64a802b@d41d8cd9",
-        "@revery/esy-cmake@0.3.5001@d41d8cd9",
+        "@santilococo/esy-cmake#cea01e8@d41d8cd9",
         "@esy-cross/ninja-build@1.8.2001@d41d8cd9"
       ],
       "devDependencies": []
@@ -725,18 +725,16 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "esy-cmake@0.3.5@d41d8cd9" ],
+      "dependencies": [ "@santilococo/esy-cmake#cea01e8@d41d8cd9" ],
       "devDependencies": []
     },
-    "esy-cmake@0.3.5@d41d8cd9": {
-      "id": "esy-cmake@0.3.5@d41d8cd9",
-      "name": "esy-cmake",
-      "version": "0.3.5",
+    "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd9": {
+      "id": "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd9",
+      "name": "esu-cmake",
+      "version": "github:santilococo/esy-cmake#cea01e8",
       "source": {
         "type": "install",
-        "source": [
-          "archive:https://registry.npmjs.org/esy-cmake/-/esy-cmake-0.3.5.tgz#sha1:2df0bdfe9317fbcded5f463fca1f346464494c7a"
-        ]
+        "source": [ "github:santilococo/esy-cmake#cea01e8" ]
       },
       "overrides": [],
       "dependencies": [],
@@ -942,20 +940,6 @@
         "type": "install",
         "source": [
           "archive:https://registry.npmjs.org/@revery/esy-harfbuzz/-/esy-harfbuzz-2.6.8002.tgz#sha1:1e6d23c8883d9f6ef5150e543e162ec83b9049cb"
-        ]
-      },
-      "overrides": [],
-      "dependencies": [],
-      "devDependencies": []
-    },
-    "@revery/esy-cmake@0.3.5001@d41d8cd9": {
-      "id": "@revery/esy-cmake@0.3.5001@d41d8cd9",
-      "name": "@revery/esy-cmake",
-      "version": "0.3.5001",
-      "source": {
-        "type": "install",
-        "source": [
-          "archive:https://registry.npmjs.org/@revery/esy-cmake/-/esy-cmake-0.3.5001.tgz#sha1:19d35421b8ec11c545a16071fc23c5ceb03a2bcb"
         ]
       },
       "overrides": [],

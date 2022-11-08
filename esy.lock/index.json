@@ -725,7 +725,7 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "github:santilococo/esy-cmake#cea01e8@d41d8cd9" ],
+      "dependencies": [ "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd" ],
       "devDependencies": []
     },
     "esy-cmake@github:santilococo/esy-cmake#cea01e8@d41d8cd9": {

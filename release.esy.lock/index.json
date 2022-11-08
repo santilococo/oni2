@@ -682,7 +682,7 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "esy-cmake@github:santilococo/esy-cmake#b317b3e@d41d8cd9" ],
+      "dependencies": [ "esy-cmake@github:santilococo/esy-cmake#b3f66f7@d41d8cd9" ],
       "devDependencies": []
     },
     "esy-libjpeg-turbo@github:revery-ui/libjpeg-turbo#dbb3dd5@d41d8cd9": {
@@ -697,7 +697,7 @@
       "overrides": [],
       "dependencies": [
         "esy-nasm@github:revery-ui/esy-nasm#64a802b@d41d8cd9",
-        "esy-cmake@github:santilococo/esy-cmake#b317b3e@d41d8cd9",
+        "esy-cmake@github:santilococo/esy-cmake#b3f66f7@d41d8cd9",
         "@esy-cross/ninja-build@1.8.2001@d41d8cd9"
       ],
       "devDependencies": []
@@ -725,16 +725,16 @@
         ]
       },
       "overrides": [],
-      "dependencies": [ "esy-cmake@github:santilococo/esy-cmake#b317b3e@d41d8cd9" ],
+      "dependencies": [ "esy-cmake@github:santilococo/esy-cmake#b3f66f7@d41d8cd9" ],
       "devDependencies": []
     },
-    "esy-cmake@github:santilococo/esy-cmake#b317b3e@d41d8cd9": {
-      "id": "esy-cmake@github:santilococo/esy-cmake#b317b3e@d41d8cd9",
+    "esy-cmake@github:santilococo/esy-cmake#b3f66f7@d41d8cd9": {
+      "id": "esy-cmake@github:santilococo/esy-cmake#b3f66f7@d41d8cd9",
       "name": "esy-cmake",
-      "version": "github:santilococo/esy-cmake#b317b3e",
+      "version": "github:santilococo/esy-cmake#b3f66f7",
       "source": {
         "type": "install",
-        "source": [ "github:santilococo/esy-cmake#b317b3e" ]
+        "source": [ "github:santilococo/esy-cmake#b3f66f7" ]
       },
       "overrides": [],
       "dependencies": [],

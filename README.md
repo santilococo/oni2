@@ -6,13 +6,14 @@
 This is a fork of [Onivim 2](https://github.com/onivim/oni2) where I will upload the latest builds (both stable and nightly).
 
 ## Table of Contents
-* [Download (for Linux)](#download)
+* [Download (for Linux)](#download-linux)
   - [Arch-based distributions](#download-arch)
   - [Other distributions](#download-other)
+* [Download (for Windows)](#download-windows)
 * [Documentation](#documentation)
 * [License](#license)
 
-## Download (for Linux) <a name="download"></a>
+## Download (for Linux) <a name="download-linux"></a>
 
 ### Arch-based distributions <a name="download-arch"></a>
 
@@ -39,6 +40,10 @@ mv logo.png /usr/share/icons/Onivim2.png
 ```
 
 After that, if `/usr/local/bin` is in your `PATH`, you can simply run `Oni2` in your terminal or application launcher.
+
+## Download (for Windows) <a name="download-windows"></a>
+
+Simply download the `.exe` file from nightly [releases](https://github.com/santilococo/oni2/releases/tag/nightly) and run it.
 
 ## Documentation <a name="documentation"></a>
 

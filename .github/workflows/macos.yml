@@ -1,0 +1,37 @@
+name: CI-macos
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:         
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+                                        
+      - name: Esy setup
+        run: |
+          npm install -g esy@latest
+          npm install -g node-gyp
+          node-gyp install 14.15.4
+          node install-node-deps.js
+          esy install
+          esy bootstrap
+          esy build --verbosity=debug
+          esy run -f --checkhealth
+          esy '@release' install
+          esy '@release' run -f --checkhealth
+          esy '@release' run --help
+          esy '@release' create
+          ls -al
+          ./_release/Onivim2.app/Contents/MacOS/Oni2 -f --checkhealth
+          ./scripts/osx/package.sh
+          tar -cvf AppDir.tar _publish
+          
+      - uses: actions/upload-artifact@v3
+        with: 
+          name: AppDirMac
+          path: AppDir.tar

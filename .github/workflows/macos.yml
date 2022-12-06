@@ -23,12 +23,16 @@ jobs:
           esy bootstrap
           esy build --verbosity=debug
           esy run -f --checkhealth
+          echo "first checkhealth"
           esy '@release' install
           esy '@release' run -f --checkhealth
+          echo "second checkhealth"
           esy '@release' run --help
+          echo "third run"
           esy '@release' create
           ls -al
           ./_release/Onivim2.app/Contents/MacOS/Oni2 -f --checkhealth
+          echo "last checkhealth"
           ./scripts/osx/package.sh
           tar -cvf AppDir.tar _publish
           

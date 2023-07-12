@@ -32,7 +32,7 @@ let useSparkle =
   switch (os) {
   | Mac =>
     switch (Sys.getenv_opt("ONI2_BUILD_MODE")) {
-    | Some("Release") => true
+    | Some("Release") => false
     | Some(_)
     | None => false
     }

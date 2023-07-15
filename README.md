@@ -10,6 +10,7 @@ This is a fork of [Onivim 2](https://github.com/onivim/oni2) where I will upload
   - [Arch-based distributions](#download-arch)
   - [Other distributions](#download-other)
 * [Download (for Windows)](#download-windows)
+* [Download (for macOS)](#download-macos)
 * [Documentation](#documentation)
 * [License](#license)
 
@@ -44,6 +45,10 @@ After that, if `/usr/local/bin` is in your `PATH`, you can simply run `Oni2` in 
 ## Download (for Windows) <a name="download-windows"></a>
 
 Simply download the `.exe` file from nightly [releases](https://github.com/santilococo/oni2/releases/tag/nightly) and run it.
+
+## Download (for macOS) <a name="download-macos"></a>
+
+Simply download the `.dmg` file from nightly [releases](https://github.com/santilococo/oni2/releases/tag/nightly) and run it. You need to allow the app to run in the privacy settings of macOS.
 
 ## Documentation <a name="documentation"></a>
 

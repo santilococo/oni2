@@ -1,5 +1,5 @@
 Copyright (C) 2021-2022 Outrun Labs \
-Copyright (C) 2022 Santiago Lo Coco
+Copyright (C) 2022-2024 Santiago Lo Coco
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
